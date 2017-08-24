@@ -253,6 +253,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{8d096864-9eea-4ce7-8a2e-cdd64b1ad382}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebCase.Services\WebCase.Services.csproj">
+      <Project>{e051faab-0d8e-4677-b86a-923b87a4258b}</Project>
+      <Name>WebCase.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
