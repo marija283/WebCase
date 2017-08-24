@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
 using WebCase.Models;
 
-namespace Database
+namespace CaseDatabase
 {
     public class CaseContext : DbContext
     {
-        public CaseContext() : base("CaseContext")
+        public CaseContext() : base()
         {
 
         }

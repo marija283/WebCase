@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaseContext.cs" />
+    <Compile Include="Migrations\201708241338285_initDb.cs" />
+    <Compile Include="Migrations\201708241338285_initDb.Designer.cs">
+      <DependentUpon>201708241338285_initDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +64,11 @@
       <Project>{34ec5abd-8b11-4e45-a655-853b2f4d64a5}</Project>
       <Name>WebCase.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708241338285_initDb.resx">
+      <DependentUpon>201708241338285_initDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
