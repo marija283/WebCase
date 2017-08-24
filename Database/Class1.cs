@@ -8,6 +8,5 @@ namespace Database
 {
     public class Class1
     {
-        // proba komentar
     }
 }
