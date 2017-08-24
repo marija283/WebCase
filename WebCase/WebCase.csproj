@@ -258,6 +258,10 @@
       <Project>{8d096864-9eea-4ce7-8a2e-cdd64b1ad382}</Project>
       <Name>Database</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebCase.Models\WebCase.Models.csproj">
+      <Project>{34ec5abd-8b11-4e45-a655-853b2f4d64a5}</Project>
+      <Name>WebCase.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebCase.Services\WebCase.Services.csproj">
       <Project>{e051faab-0d8e-4677-b86a-923b87a4258b}</Project>
       <Name>WebCase.Services</Name>
