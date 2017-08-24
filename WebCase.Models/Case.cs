@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebCase.Models
 {
-    class Case
+    public class Case
     {
         public int ID { get; set; }
 

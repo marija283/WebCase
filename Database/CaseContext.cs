@@ -10,6 +10,6 @@ namespace Database
 
         }
 
-        public DbSet<Case> Contacts { get; set; }
+        public DbSet<Case> Cases { get; set; }
     }
 }
