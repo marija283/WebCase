@@ -59,25 +59,25 @@ namespace WebCase.Services
             }
         }
 
-        //public HttpStatusCode UpdateContact(Case cases)
-        //{
-        //    using (var context = new CaseContext())
-        //    {
-        //        try
-        //        {
-        //            var original = context.Cases.Find(cases.ID);
-        //            //original.Name = cases.Name;
-        //            context.SaveChanges();
-        //            return System.Net.HttpStatusCode.OK;
+        public HttpStatusCode UpdateContact(Case cases)
+        {
+            using (var context = new CaseContext())
+            {
+                try
+                {
+                    var original = context.Cases.Find(cases.ID);
+                    original.attachment = cases.attachment;
+                    context.SaveChanges();
+                    return System.Net.HttpStatusCode.OK;
 
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine(ex.Message);
-        //            return System.Net.HttpStatusCode.NotFound;
-        //        }
-        //    }
-        //}
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return System.Net.HttpStatusCode.NotFound;
+                }
+            }
+        }
 
         public HttpStatusCode DeleteCase(int id)
         {
