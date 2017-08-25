@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using WebCase.Models;
+using System.Collections;
 
 namespace WebCase.Services
 {
@@ -12,11 +13,14 @@ namespace WebCase.Services
     {
         Case GetCases(int id);
 
-        HttpStatusCode SaveContact(Case contact);
+        List<Case>  GetAllCases();
 
-        //HttpStatusCode UpdateContact(Case contact);
 
-        HttpStatusCode DeleteContact(int id);
+        HttpStatusCode SaveCase(Case myCase);
+
+        //HttpStatusCode UpdateContact(Case myCase);
+
+        HttpStatusCode DeleteCase(int id);
     }
 }
 

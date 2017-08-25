@@ -6,11 +6,24 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using WebCase.Models;
+using System.Collections;
+
 
 namespace WebCase.Services
 {
     public class CaseRepoImpl : ICaseRepo
     {
+        public List<Case>  GetAllCases()
+        {
+            using (var context = new CaseContext())
+            {
+
+                List<Case> cases = context.Cases.ToList();
+               
+                return cases;
+            }
+
+        }
 
         public Case GetCases(int id)
         {
@@ -26,7 +39,7 @@ namespace WebCase.Services
 
         }
 
-        public HttpStatusCode SaveContact(Case cases)
+        public HttpStatusCode SaveCase(Case cases)
         {
 
             using (var context = new CaseContext())
@@ -66,7 +79,7 @@ namespace WebCase.Services
         //    }
         //}
 
-        public HttpStatusCode DeleteContact(int id)
+        public HttpStatusCode DeleteCase(int id)
         {
             using (var context = new CaseContext())
             {

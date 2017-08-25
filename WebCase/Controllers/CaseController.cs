@@ -4,33 +4,42 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebCase.Models;
 using WebCase.Services;
 
 namespace WebCase.Controllers
 {
     public class CaseController : ApiController
     {
+
         private ICaseRepo caseRepo;
 
         public CaseController(ICaseRepo service)
         {
             this.caseRepo = service;
         }
+
+
         // GET api/values
-        public IEnumerable<string> Get()
+        public List<Case> Get()
         {
-            return new string[] { "value1", "value2" };
+            return caseRepo.GetAllCases();
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Case Get(int id)
         {
-            return "value";
+            return caseRepo.GetCases(id);
+            
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        [HttpPost]
+
+        public void Post(Case myCase)
         {
+            var result = this.caseRepo.SaveCase(myCase);
+         
         }
 
         // PUT api/values/5
