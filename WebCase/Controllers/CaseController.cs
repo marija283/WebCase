@@ -4,11 +4,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebCase.Services;
 
 namespace WebCase.Controllers
 {
-    public class ValuesController : ApiController
+    public class CaseController : ApiController
     {
+        private ICaseRepo caseRepo;
+
+        public CaseController(ICaseRepo service)
+        {
+            this.caseRepo = service;
+        }
         // GET api/values
         public IEnumerable<string> Get()
         {
