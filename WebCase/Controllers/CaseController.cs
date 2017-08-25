@@ -20,7 +20,7 @@ namespace WebCase.Controllers
         }
 
 
-        // GET api/values
+        // GET api/cases
         public List<Case> Get()
         {
             return caseRepo.GetAllCases();
