@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CaseRepoImpl.cs" />
+    <Compile Include="ICaseRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Database\CaseDatabase.csproj">
       <Project>{8d096864-9eea-4ce7-8a2e-cdd64b1ad382}</Project>
       <Name>CaseDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebCase.Models\WebCase.Models.csproj">
+      <Project>{34ec5abd-8b11-4e45-a655-853b2f4d64a5}</Project>
+      <Name>WebCase.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

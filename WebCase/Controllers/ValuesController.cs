@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebCase.Models;
+using WebCase.Services;
 
 namespace WebCase.Controllers
 {
@@ -16,9 +18,11 @@ namespace WebCase.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Case Get(int id)
         {
-            return "value";
+            ICaseRepo _repository = new CaseRepoImpl();
+            return _repository.GetCases(id);
+            
         }
 
         // POST api/values
