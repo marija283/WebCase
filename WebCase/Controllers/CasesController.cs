@@ -9,17 +9,17 @@ using WebCase.Services;
 
 namespace WebCase.Controllers
 {
-    public class CaseController : ApiController
+    public class CasesController : ApiController
     {
 
         private ICaseRepo caseRepo;
 
-        public CaseController()
+        public CasesController()
         {
             this.caseRepo = new CaseRepoImpl();
         }
 
-        public CaseController(ICaseRepo service)
+        public CasesController(ICaseRepo service)
         {
             this.caseRepo = service;
         }
