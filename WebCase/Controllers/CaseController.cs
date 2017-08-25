@@ -14,6 +14,11 @@ namespace WebCase.Controllers
 
         private ICaseRepo caseRepo;
 
+        public CaseController()
+        {
+            this.caseRepo = new CaseRepoImpl();
+        }
+
         public CaseController(ICaseRepo service)
         {
             this.caseRepo = service;
