@@ -15,6 +15,20 @@ namespace WebCase.Models
         public String kind { get; set; }
 
         public String customerNumber { get; set; }
+
+       // public String status { get; set; }
+
+      //  public String resolution { get; set; }
+
+     //   public String importance { get; set; }
+
+     //   public String title { get; set; }
+
+     //   public String details { get; set; }
+
+     //   public String arrangementNumber { get; set; }
+
+         
            
     }
 }
