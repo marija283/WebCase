@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using WebCase.Services;
 using WebCase.Models;
@@ -6,6 +7,8 @@ using System.Collections.Generic;
 
 namespace TestProject
 {
+
+
     [Binding]
 
     public class SpecFlowFeature1Steps
@@ -15,8 +18,13 @@ namespace TestProject
         [When(@"I make a request, I want to get a list of all cases")]
         public void WhenIMakeARequestIWantToGetAListOfAllCases()
         {
-            //this.caseRepo = new CaseRepoImpl();
-            //List<Case> result =  caseRepo.GetAllCases();
+           caseRepo = new CaseRepoImpl();
+
+            List<Case> result = caseRepo.GetAllCases();
+
+           // List<Case> result = new List<Case>();
+
+            result.ForEach(i => Console.Write("{0}\t", i));
         }
     }
 }
