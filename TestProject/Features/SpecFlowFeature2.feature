@@ -12,10 +12,16 @@ Background:
 
 
 @mytag
-Scenario: GetCase
+Scenario Outline: GetCase
 	#Given I have entered 50 into the calculator
 	#And I have entered 70 into the calculator
-	When I search for cases by the 'id'
+	When I search for cases by the enter <id> 
 	Then the list of found books should be:
 		| id | caseNmber | kind | customerNumer | attachment        |
 		| 1  | 123       | nice | 456           | NULL              |
+
+	
+	Examples:
+	| id  | 
+	| 1   | 
+	| 2   | 

@@ -28,7 +28,7 @@ namespace TestProject
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"I search for cases by the '(.*)'")]
+        [When(@"I search for cases by the (.*)")]
         public void WhenISearchForCasesByThe(int caseId)
         {
             // ScenarioContext.Current.Pending();
@@ -39,7 +39,7 @@ namespace TestProject
             caseRepo = new CaseRepoImpl();
             var book2 = caseRepo.GetCaseById(caseId);
             CasesController controller = new CasesController();
-            Case myCase = controller.Get(caseId);
+            myCase = controller.Get(caseId);
 
         }
 
@@ -47,12 +47,11 @@ namespace TestProject
         public void ThenTheListOfFoundBooksShouldBe(Table table)
         {
             //ScenarioContext.Current.Pending();
-            var caseDetails = myCase;
 
             var row = table.Rows.Single();
-            Assert.AreEqual(row["caseNumber"], caseDetails.caseNumber, "caseNumber.");
-            Assert.AreEqual(row["kind"], caseDetails.kind, "kind.");
-            Assert.AreEqual(Convert.ToDecimal(row["customerNumber"]), caseDetails.customerNumber, "customerNumber.");
+            Assert.AreEqual(row["caseNumber"], myCase.caseNumber, "caseNumber.");
+            Assert.AreEqual(row["kind"], myCase.kind, "kind.");
+            Assert.AreEqual(Convert.ToDecimal(row["customerNumber"]), myCase.customerNumber, "customerNumber.");
         }
     }
 }

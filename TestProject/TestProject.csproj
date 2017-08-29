@@ -101,6 +101,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\GetScenario.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetScenario.feature</DependentUpon>
+    </Compile>
     <Compile Include="StepDefinitions\CaseGetByIdSteps.cs" />
     <Compile Include="Features\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
@@ -112,6 +117,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature2.feature</DependentUpon>
     </Compile>
+    <Compile Include="StepDefinitions\GetScenarioSteps.cs" />
     <Compile Include="StepDefinitions\SpecFlowFeature1Steps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,6 +129,10 @@
     <None Include="Features\SpecFlowFeature2.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SpecFlowFeature2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GetScenario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GetScenario.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
