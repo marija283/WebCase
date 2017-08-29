@@ -290,10 +290,6 @@
       <Project>{8d096864-9eea-4ce7-8a2e-cdd64b1ad382}</Project>
       <Name>CaseDatabase</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestProject\TestProject.csproj">
-      <Project>{016f6b8d-a38b-4296-9c57-a20c0b346cbc}</Project>
-      <Name>TestProject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebCase.Models\WebCase.Models.csproj">
       <Project>{34ec5abd-8b11-4e45-a655-853b2f4d64a5}</Project>
       <Name>WebCase.Models</Name>
