@@ -23,8 +23,23 @@ namespace TestProject
         private Case myCase;
 
         [Given(@"the following cases")]
-        public void GivenTheFollowingCases(Table table)
+        public void GivenTheFollowingCases(Table givenCases)
         {
+            foreach (var row in givenCases.Rows)
+            {
+                Case myCase = new Case();
+                if (givenCases.Header.Contains("caseNumber"))
+                    myCase.caseNumber = row["caseNumber"];
+
+                if (givenCases.Header.Contains("kind"))
+                    myCase.kind = row["kind"];
+
+                if (givenCases.Header.Contains("customerNumber"))
+                    myCase.customerNumber = row["customerNumber"];
+
+                if (givenCases.Header.Contains("attachment"))
+                    myCase.attachment = row["attachment"];
+            }
             ScenarioContext.Current.Pending();
         }
         
