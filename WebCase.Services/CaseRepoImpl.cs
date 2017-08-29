@@ -66,7 +66,11 @@ namespace WebCase.Services
                 try
                 {
                     var original = context.Cases.Find(cases.ID);
-                    original.attachment = cases.attachment;
+                    if (original != null)
+                    {
+                        original.attachment = cases.attachment;
+                        original.kind = cases.kind;
+                    }
                     context.SaveChanges();
                     return System.Net.HttpStatusCode.OK;
 

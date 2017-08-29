@@ -133,8 +133,10 @@ namespace WebCase.Controllers
         }
 
         // PUT api/cases/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Case myCase)
         {
+            myCase.ID = id;
+            _caseRepo.UpdateContact(myCase);
         }
 
         // DELETE api/cases/5
