@@ -16,7 +16,7 @@ namespace WebCase.Services
         List<Case>  GetAllCases();
         HttpStatusCode SaveCase(Case myCase);
 
-        HttpStatusCode UpdateContact(Case myCase);
+        HttpStatusCode UpdateCase(Case myCase);
 
         HttpStatusCode DeleteCase(int id);
     }

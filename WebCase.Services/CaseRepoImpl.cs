@@ -59,7 +59,7 @@ namespace WebCase.Services
             }
         }
 
-        public HttpStatusCode UpdateContact(Case cases)
+        public HttpStatusCode UpdateCase(Case cases)
         {
             using (var context = new CaseContext())
             {

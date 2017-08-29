@@ -118,7 +118,7 @@ namespace WebCase.Controllers
                     theCase.attachment = filePath;
 
 
-                    _caseRepo.UpdateContact(theCase);
+                    _caseRepo.UpdateCase(theCase);
 
 
 
@@ -136,7 +136,7 @@ namespace WebCase.Controllers
         public void Put(int id, [FromBody]Case myCase)
         {
             myCase.ID = id;
-            _caseRepo.UpdateContact(myCase);
+            _caseRepo.UpdateCase(myCase);
         }
 
         // DELETE api/cases/5
