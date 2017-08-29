@@ -18,6 +18,11 @@ namespace WebCase.Models
 
         public String attachment { get; set; }
 
+        public override string ToString()
+        {
+            return String.Format("Case Number: {0}, Kind:{1}", caseNumber, kind);
+        }
+
 
         // public String status { get; set; }
 
