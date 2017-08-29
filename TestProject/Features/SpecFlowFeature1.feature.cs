@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TestProject
+namespace TestProject.Features
 {
     using TechTalk.SpecFlow;
     
@@ -47,7 +47,7 @@ namespace TestProject
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "SpecFlowFeature1")))
             {
-                global::TestProject.SpecFlowFeature1Feature.FeatureSetup(null);
+                global::TestProject.Features.SpecFlowFeature1Feature.FeatureSetup(null);
             }
         }
         
