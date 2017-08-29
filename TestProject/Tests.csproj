@@ -111,16 +111,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GetCaseById.feature</DependentUpon>
     </Compile>
-    <Compile Include="StepDefinitions\CaseGetByIdSteps.cs" />
     <Compile Include="Features\SpecFlowFeature1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\SpecFlowFeature2.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SpecFlowFeature2.feature</DependentUpon>
     </Compile>
     <Compile Include="StepDefinitions\GetScenarioSteps.cs" />
     <Compile Include="StepDefinitions\SpecFlowFeature1Steps.cs" />
@@ -133,10 +127,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Features\TestCases.xlsx" />
-    <None Include="Features\SpecFlowFeature2.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SpecFlowFeature2.feature.cs</LastGenOutput>
-    </None>
     <None Include="Features\GetScenario.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GetScenario.feature.cs</LastGenOutput>

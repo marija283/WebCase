@@ -9,4 +9,4 @@ Scenario Outline: Get case by id
 
 Examples:
 | ID |
-| 1  |
+| 1 |
