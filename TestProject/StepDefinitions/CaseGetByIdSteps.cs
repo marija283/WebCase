@@ -37,9 +37,9 @@ namespace TestProject
             // actionResult = controller.Details(book.Id);
 
             caseRepo = new CaseRepoImpl();
-            var book2 = caseRepo.GetCases(caseId);
-            var controller = new CasesController();
-            // var cases = controller.Get(caseId);
+            var book2 = caseRepo.GetCaseById(caseId);
+            CasesController controller = new CasesController();
+            Case myCase = controller.Get(caseId);
 
         }
 

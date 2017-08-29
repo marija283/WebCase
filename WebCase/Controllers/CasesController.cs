@@ -35,14 +35,14 @@ namespace WebCase.Controllers
             return _caseRepo.GetAllCases();
         }
 
-        // GET api/values/5
+        // GET api/cases/5
         public Case Get(int id)
         {
-            return _caseRepo.GetCases(id);
+            return _caseRepo.GetCaseById(id);
 
         }
 
-        // POST api/values
+        // POST api/cases
         //[HttpPost]
         //public void Post(Case myCase)
         //{
@@ -63,7 +63,7 @@ namespace WebCase.Controllers
                     throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
                 }
 
-                Case theCase = _caseRepo.GetCases(id);
+                Case theCase = _caseRepo.GetCaseById(id);
 
                 if (theCase == null)
                 {
@@ -132,12 +132,12 @@ namespace WebCase.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // PUT api/values/5
+        // PUT api/cases/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/cases/5
         public void Delete(int id)
         {
         }

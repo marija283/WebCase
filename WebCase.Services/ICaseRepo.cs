@@ -11,11 +11,9 @@ namespace WebCase.Services
 {
     public interface ICaseRepo
     {
-        Case GetCases(int id);
+        Case GetCaseById(int id);
 
         List<Case>  GetAllCases();
-
-
         HttpStatusCode SaveCase(Case myCase);
 
         HttpStatusCode UpdateContact(Case myCase);

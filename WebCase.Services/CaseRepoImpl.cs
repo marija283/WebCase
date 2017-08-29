@@ -25,7 +25,7 @@ namespace WebCase.Services
 
         }
 
-        public Case GetCases(int id)
+        public Case GetCaseById(int id)
         {
             using (var context = new CaseContext())
             {
