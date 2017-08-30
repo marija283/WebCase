@@ -43,12 +43,12 @@ namespace WebCase.Controllers
         }
 
         // POST api/cases
-        //[HttpPost]
-        //public void Post(Case myCase)
-        //{
-        //    var result = this.caseRepo.SaveCase(myCase);
+        [HttpPost]
+        public void Post(Case mycase)
+        {
+            var result = this._caseRepo.SaveCase(mycase);
 
-        //}
+        }
 
 
 
