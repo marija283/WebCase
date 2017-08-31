@@ -107,6 +107,9 @@ namespace WebCase.Controllers
                         throw new Exception("Not supported format");
                     fileName = id + extension;
 
+                    exists = File.Exists(Path.Combine(root, fileName));
+                    if (exists)
+                        File.Delete(Path.Combine(root, fileName));
 
                     File.Move(file.LocalFileName, Path.Combine(root, fileName));
 

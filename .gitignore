@@ -274,3 +274,5 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 WebCase/attachments/
+*.pdf
+WebCase/attachments/1.pdf
